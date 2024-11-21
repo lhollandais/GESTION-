@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Projet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Menu sticky */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .sticky-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        .sticky-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            background-image: url('https://www.tiilt.io/wp-content/uploads/2023/01/iStock-844535646.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px; /* Pour laisser de l'espace pour le menu sticky */
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-style: italic;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .content {
+            padding: 40px;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+        }
+
+        .add-project-form {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 60%;
+            text-align: left;
+        }
+
+        .add-project-form input,
+        .add-project-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .add-project-form button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-project-form button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 1em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sticky-nav">
+        <a href="#">Accueil</a>
+        <a href="#">Projets</a>
+        <a href="#">Ajouter un Projet</a>
+    </div>
+
+    <div class="header">
+        <h1>Transformez vos idées en un projet réussi</h1>
+    </div>
+
+    <div class="content">
+        <h2>Pourquoi la gestion de projet est-elle essentielle ?</h2>
+        <p>La gestion de projet permet de définir des objectifs clairs, de suivre les progrès et de respecter les délais. Apprenez à utiliser les meilleures pratiques pour garantir la réussite de vos projets.</p>
+
+        <h2>Ajouter un Nouveau Projet</h2>
+        <div class="add-project-form">
+            <form action="#">
+                <label for="project-title">Titre du Projet</label>
+                <input type="text" id="project-title" name="project-title" placeholder="Entrez le titre du projet" required>
+
+                <label for="project-description">Description</label>
+                <textarea id="project-description" name="project-description" rows="3" placeholder="Décrivez votre projet" required></textarea>
+
+                <label for="project-start-date">Date de début</label>
+                <input type="date" id="project-start-date" name="project-start-date" required>
+
+                <label for="project-deadline">Date limite</label>
+                <input type="date" id="project-deadline" name="project-deadline" required>
+
+                <button type="submit">Ajouter le projet</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Gestion de Projet. Tous droits réservés. <br>
+        <a href="https://www.smartgecko.academy" target="_blank">Visitez notre site pour plus d'informations.</a></p>
+    </div>
+
+</body>
+</html>
